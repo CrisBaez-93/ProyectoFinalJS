@@ -1,0 +1,41 @@
+header{
+    background-color: #252422;
+  }
+
+h1{
+    color: #eb5e28;
+}
+
+h2{
+    color: #eb5e28;
+}
+
+#header__p__darkMode{
+    color: white;
+  }
+
+main{
+    color: #fafaff;
+    background-color: #7c7a7a;
+}
+
+.main__form{
+    background-color: #252422;
+    color: #fafaff;
+
+  }
+  
+  input{
+    color: #fafaff;
+    background-color: #403d39;
+  }
+  
+  button{
+    background-color: #eb5e28;
+    color: #fafaff;
+}
+
+  button:hover{
+    color: #eb5e28;
+    background-color: #fafaff;
+  }
