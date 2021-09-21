@@ -28,12 +28,99 @@
     </header>
     <main>
         <form action="" class="main__form">
-            <label for="primerRespuesta">Pregunta 1: Elegí A, B, C o D</label>
+            <label for="primerRespuesta">
+                Pregunta 1: ¿Cuándo te sientes mejor? <br>
+                <p class="form__opciones">
+                A) Por la mañana <br>
+                B) Pasado el mediodía <br>
+                C) Por la tarde cuando oscurece <br>
+                D) Entrada la noche </p>
+            </label>
             <div>
-                <input type="text" name="primerRespuesta" id="primerRespuesta" placeholder="Ingresa tu respuesta" class="text-center" autocomplete="off"/>
+                <input type="text" name="primerRespuesta" id="primerRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
                 <button id="submit1">Responder</button>
             </div>
+            <div id="pregunta1"></div>
         </form>
+
+        <form action="" class="main__form">
+            <label for="segundaRespuesta">
+                Pregunta 2: Por lo general caminas: <br>
+                <p class="form__opciones">
+                A) Bastante rápido, con pasos largos <br>
+                B) Bastante rápido, con pasos cortos y rápidos <br>
+                C) Menos rápido, cabizbajo <br>
+                D) Muy lentamente </p></label>
+            <div>
+                <input type="text" name="segundaRespuesta" id="segundaRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
+                <button id="submit2">Responder</button>
+            </div>
+            <div id="pregunta2"></div>
+        </form>
+
+        <form action="" class="main__form">
+            <label for="tercerRespuesta">
+                Pregunta 3: Cuando hablas con personas, generalmente: <br>
+                <p class="form__opciones">
+                A) Tienes los brazos cruzados <br>
+                B) Tienes las manos juntas <br>
+                C) Tienes una o ambas manos en las caderas <br>
+                D) Juegas con tu oreja, tocas tu mentón o acaricias tu pelo </p></label>
+            <div>
+                <input type="text" name="tercerRespuesta" id="tercerRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
+                <button id="submit3">Responder</button>
+            </div>
+            <div id="pregunta3"></div>
+        </form>
+
+        <form action="" class="main__form">
+            <label for="cuartaRespuesta">
+                Pregunta 4: Cuando te relajas, te sientas con: <br>
+                <p class="form__opciones">
+                A) Las rodillas dobladas y las piernas juntas <br>
+                B) Las piernas cruzadas <br>
+                C) Las piernas extendidas o rectas <br>
+                D) Una pierna doblada hechada hacia atras </p></label>
+            <div>
+                <input type="text" name="cuartaRespuesta" id="cuartaRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
+                <button id="submit4">Responder</button>
+            </div>
+            <div id="pregunta4"></div>
+        </form>
+
+        <form action="" class="main__form">
+            <label for="quintaRespuesta">
+                Pregunta 5: Está trabajando muy duro, muy concentrando y te interrumpen. ¿Cómo reaccionas? <br>
+                <p class="form__opciones">
+                A) Agradeces el descanso <br>
+                B) Dejas completamente lo que estabas haciendo y pones tu atención en lo secundario <br>
+                C) Te sientes extremadamente irritado <br>
+                D) Alternas entre los dos extremos </p></label>
+            <div>
+                <input type="text" name="quintaRespuesta" id="quintaRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
+                <button id="submit5">Responder</button>
+            </div>
+            <div id="pregunta5"></div>
+        </form>
+
+        <form action="" class="main__form">
+            <label for="sextaRespuesta">
+                Pregunta 6: A menudo sueñas que estás: <br>
+                <p class="form__opciones">
+                A) Cayendo <br>
+                B) Luchando o peleando <br>
+                C) Buscando a alguien o algo <br>
+                D) Volando o flotando </p></label>
+            <div>
+                <input type="text" name="sextaRespuesta" id="sextaRespuesta" placeholder="Ingresa A, B, C o D" class="text-center" autocomplete="off"/>
+                <button id="submit6">Responder</button>
+            </div>
+            <div id="pregunta6"></div>
+        </form>
+
+        <br>
+        <div id="respuesta"></div>
+        <div id="respuesta2"></div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="app.js"></script>

@@ -54,7 +54,8 @@ main{
   width: 100%;
   background-color: #fafaff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -73,6 +74,12 @@ main{
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
+}
+
+.form__opciones{
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 input{
@@ -95,11 +102,16 @@ button{
   -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #deb841;
+  border: 0px;
 }
 
 button:hover{
   background-color: #284b63;
   color: #deb841;
+}
+
+input{
+  border: 0px;
 }
 
 

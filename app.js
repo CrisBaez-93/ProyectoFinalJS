@@ -6,7 +6,7 @@ $(".checkbox").click(function () {
   }
 });
 
-let puntaje = 50;
+let puntaje = 65;
 sessionStorage.setItem("puntaje", puntaje);
 const URLHP = "https://hp-api.herokuapp.com/api/characters";
 
@@ -20,10 +20,10 @@ class Respuestas {
 
 let listaRespuestas = [];
 
-let respuesta1 = new Respuestas("AAA", "esta diferencia", "estos atributos");
-let respuesta2 = new Respuestas("BBB", "esta otra diferencia", "estos otros atributos");
-let respuesta3 = new Respuestas("CCC", "estas mas diferencia", "estos menos atributos");
-let respuesta4 = new Respuestas("DDD", "estas menos diferencia", "estos mas atributos");
+let respuesta1 = new Respuestas("Promedio", "inestabilidad emocional", "cerradas y a la vez extrovertidas");
+let respuesta2 = new Respuestas("Modelo a Seguir", "mucha amabilidad", "poco neuroticos");
+let respuesta3 = new Respuestas("Reservada", "mucha estabilidad", "agradables y pensar antes de actuar");
+let respuesta4 = new Respuestas("Egocéntrica", "mucha estima en su persona", "centrados en sí mismos");
 
 listaRespuestas.push(respuesta1);
 listaRespuestas.push(respuesta2);
@@ -35,7 +35,7 @@ let selectorRespuesta = document.getElementById("respuesta");
 $("#submit1").click(function (e) {
   e.preventDefault();
   $("#pregunta1").animate(
-    { height: "50px", Color: "white" },
+    { height: "50px", Color: "#d9d9d9" },
     1000,
     respuestaClick1
   );
@@ -43,7 +43,7 @@ $("#submit1").click(function (e) {
 $("#submit2").click(function (e) {
   e.preventDefault();
   $("#pregunta2").animate(
-    { height: "50px", Color: "white" },
+    { height: "50px", Color: "#d9d9d9" },
     1000,
     respuestaClick2
   );
@@ -51,7 +51,7 @@ $("#submit2").click(function (e) {
 $("#submit3").click(function (e) {
   e.preventDefault();
   $("#pregunta3").animate(
-    { height: "50px", Color: "white" },
+    { height: "50px", Color: "#d9d9d9" },
     1000,
     respuestaClick3
   );
@@ -59,9 +59,25 @@ $("#submit3").click(function (e) {
 $("#submit4").click(function (e) {
   e.preventDefault();
   $("#pregunta4").animate(
-    { height: "50px", Color: "white" },
+    { height: "50px", Color: "#d9d9d9" },
     1000,
     respuestaClick4
+  );
+});
+$("#submit5").click(function (e) {
+  e.preventDefault();
+  $("#pregunta5").animate(
+    { height: "50px", Color: "#d9d9d9" },
+    1000,
+    respuestaClick5
+  );
+});
+$("#submit6").click(function (e) {
+  e.preventDefault();
+  $("#pregunta5").animate(
+    { height: "50px", Color: "#d9d9d9" },
+    1000,
+    respuestaClick6
   );
 });
 
@@ -191,42 +207,106 @@ function respuestaClick4() {
     puntos +
     ", tu puntaje es " +
     sessionStorage.getItem("puntaje", puntaje);
+}
 
-  if (sessionStorage.getItem("puntaje", puntaje) >= 34) {
-    console.log(`Tu personalidad es ${respuesta1.tipo}, se diferencia de las otras en ${respuesta1.dif}, y sus principales ventajas son ${respuesta1.vent}`);
+function respuestaClick5() {
+  let puntos = document.getElementById("quintaRespuesta").value;
+  if (puntos == "A") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 4;
+  } else if (puntos == "B") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 6;
+  } else if (puntos == "C") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 8;
+  } else if (puntos == "D") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 10;
+  } else {
+    console.log("Respuesta no válida");
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 50;
+    sessionStorage.setItem("puntaje", puntaje);
+    console.log("Tu Puntaje es " + puntaje);
+    let div5 = document.getElementById("pregunta5");
+    let p5 = document.createElement("p");
+    div5.appendChild(p5);
+    p5.textContent = "Tu respuesta fue incorrecta";
+  }
+  sessionStorage.setItem("puntaje", puntaje);
+  console.log("Tu Puntaje es " + puntaje);
+  let div5 = document.getElementById("pregunta5");
+  let p5 = document.createElement("p");
+  div5.appendChild(p5);
+  p5.textContent =
+    "Tu respuesta fue " +
+    puntos +
+    ", tu puntaje es " +
+    sessionStorage.getItem("puntaje", puntaje);
+}
+
+function respuestaClick6() {
+  let puntos = document.getElementById("sextaRespuesta").value;
+  if (puntos == "A") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 4;
+  } else if (puntos == "B") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 6;
+  } else if (puntos == "C") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 8;
+  } else if (puntos == "D") {
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 10;
+  } else {
+    console.log("Respuesta no válida");
+    puntaje = sessionStorage.getItem("puntaje", puntaje) - 50;
+    sessionStorage.setItem("puntaje", puntaje);
+    console.log("Tu Puntaje es " + puntaje);
+    let div6 = document.getElementById("pregunta6");
+    let p6 = document.createElement("p");
+    div6.appendChild(p6);
+    p6.textContent = "Tu respuesta fue incorrecta";
+  }
+  sessionStorage.setItem("puntaje", puntaje);
+  console.log("Tu Puntaje es " + puntaje);
+  let div6 = document.getElementById("pregunta6");
+  let p6 = document.createElement("p");
+  div6.appendChild(p6);
+  p6.textContent =
+    "Tu respuesta fue " +
+    puntos +
+    ", tu puntaje es " +
+    sessionStorage.getItem("puntaje", puntaje);
+
+  if (sessionStorage.getItem("puntaje", puntaje) >= 41) {
+    console.log(`Tu personalidad es ${respuesta1.tipo}, son personas con ${respuesta1.dif}, y se diferencia de los demas por ser ${respuesta1.vent}`);
     let h1 = document.createElement("h1");
     selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta1.tipo}, se diferencia de las otras en ${respuesta1.dif}, y sus principales ventajas son ${respuesta1.vent}`;
+    h1.textContent = `Tu personalidad es ${respuesta1.tipo}, son personas con ${respuesta1.dif}, y se diferencia de los demas por ser ${respuesta1.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
             $("#respuesta2").prepend(`<h2>Tu personalidad concuerda con ${datosPersonajes[0].name} de la casa ${datosPersonajes[0].house}</h2>`)
             }})
-  } else if (sessionStorage.getItem("puntaje", puntaje) >= 26 && puntaje < 34) {
-    console.log(`Tu personalidad es ${respuesta2.tipo}, se diferencia de las otras en ${respuesta2.dif}, y sus principales ventajas son ${respuesta2.vent}`);
+  } else if (sessionStorage.getItem("puntaje", puntaje) >= 30 && puntaje <= 40) {
+    console.log(`Tu personalidad es ${respuesta2.tipo}, son personas con ${respuesta2.dif}, y se diferencia de los demas por ser ${respuesta2.vent}`);
     let h1 = document.createElement("h1");
     selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta2.tipo}, se diferencia de las otras en ${respuesta2.dif}, y sus principales ventajas son ${respuesta2.vent}`;
+    h1.textContent = `Tu personalidad es ${respuesta2.tipo}, son personas con ${respuesta2.dif}, y se diferencia de los demas por ser ${respuesta2.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
             $("#respuesta2").prepend(`<h2>Tu personalidad concuerda con ${datosPersonajes[1].name} de la casa ${datosPersonajes[1].house}</h2>`)
             }})
-  } else if (sessionStorage.getItem("puntaje", puntaje) >= 18 && puntaje < 25) {
-    console.log(`Tu personalidad es ${respuesta3.tipo}, se diferencia de las otras en ${respuesta3.dif}, y sus principales ventajas son ${respuesta3.vent}`);
+  } else if (sessionStorage.getItem("puntaje", puntaje) >= 13 && puntaje <= 29) {
+    console.log(`Tu personalidad es ${respuesta3.tipo}, son personas con ${respuesta3.dif}, y se diferencia de los demas por ser ${respuesta3.vent}`);
     let h1 = document.createElement("h1");
     selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta3.tipo}, se diferencia de las otras en ${respuesta3.dif}, y sus principales ventajas son ${respuesta3.vent}`;
+    h1.textContent = `Tu personalidad es ${respuesta3.tipo}, son personas con ${respuesta3.dif}, y se diferencia de los demas por ser ${respuesta3.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
             $("#respuesta2").prepend(`<h2>Tu personalidad concuerda con ${datosPersonajes[2].name} de la casa ${datosPersonajes[2].house}</h2>`)
             }})
-  } else if (sessionStorage.getItem("puntaje", puntaje) == 10 && puntaje < 17) {
-    console.log(`Tu personalidad es ${respuesta4.tipo}, se diferencia de las otras en ${respuesta4.dif}, y sus principales ventajas son ${respuesta4.vent}`);
+  } else if (sessionStorage.getItem("puntaje", puntaje) == 5 && puntaje <= 12) {
+    console.log(`Tu personalidad es ${respuesta4.tipo}, son personas con ${respuesta4.dif}, y se diferencia de los demas por ser ${respuesta4.vent}`);
     let h1 = document.createElement("h1");
     selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta4.tipo}, se diferencia de las otras en ${respuesta4.dif}, y sus principales ventajas son ${respuesta4.vent}`;
+    h1.textContent = `Tu personalidad es ${respuesta4.tipo}, son personas con ${respuesta4.dif}, y se diferencia de los demas por ser ${respuesta4.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
