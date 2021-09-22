@@ -98,6 +98,7 @@ function respuestaClick1() {
     console.log("Tu Puntaje es " + puntaje);
     let div1 = document.getElementById("pregunta1");
     let p1 = document.createElement("p");
+    p1.setAttribute("class", "resultado");
     div1.appendChild(p1);
     p1.textContent = "Tu respuesta fue incorrecta";
   }
@@ -105,6 +106,7 @@ function respuestaClick1() {
   console.log("Tu Puntaje es " + puntaje);
   let div1 = document.getElementById("pregunta1");
   let p1 = document.createElement("p");
+  p1.setAttribute("class", "resultado");
   div1.appendChild(p1);
   p1.textContent =
     "Tu respuesta fue " +
@@ -130,6 +132,7 @@ function respuestaClick2() {
     console.log("Tu Puntaje es " + puntaje);
     let div2 = document.getElementById("pregunta2");
     let p2 = document.createElement("p");
+    p2.setAttribute("class", "resultado");
     div2.appendChild(p2);
     p2.textContent = "Tu respuesta fue incorrecta";
   }
@@ -137,6 +140,7 @@ function respuestaClick2() {
   console.log("Tu Puntaje es " + puntaje);
   let div2 = document.getElementById("pregunta2");
   let p2 = document.createElement("p");
+  p2.setAttribute("class", "resultado");
   div2.appendChild(p2);
   p2.textContent =
     "Tu respuesta fue " +
@@ -162,6 +166,7 @@ function respuestaClick3() {
     console.log("Tu Puntaje es " + puntaje);
     let div3 = document.getElementById("pregunta3");
     let p3 = document.createElement("p");
+    p3.setAttribute("class", "resultado");
     div3.appendChild(p3);
     p3.textContent = "Tu respuesta fue incorrecta";
   }
@@ -169,6 +174,7 @@ function respuestaClick3() {
   console.log("Tu Puntaje es " + puntaje);
   let div3 = document.getElementById("pregunta3");
   let p3 = document.createElement("p");
+  p3.setAttribute("class", "resultado");
   div3.appendChild(p3);
   p3.textContent =
     "Tu respuesta fue " +
@@ -194,6 +200,7 @@ function respuestaClick4() {
     console.log("Tu Puntaje es " + puntaje);
     let div4 = document.getElementById("pregunta4");
     let p4 = document.createElement("p");
+    p4.setAttribute("class", "resultado");
     div4.appendChild(p4);
     p4.textContent = "Tu respuesta fue incorrecta";
   }
@@ -201,6 +208,7 @@ function respuestaClick4() {
   console.log("Tu Puntaje es " + puntaje);
   let div4 = document.getElementById("pregunta4");
   let p4 = document.createElement("p");
+  p4.setAttribute("class", "resultado");
   div4.appendChild(p4);
   p4.textContent =
     "Tu respuesta fue " +
@@ -226,6 +234,7 @@ function respuestaClick5() {
     console.log("Tu Puntaje es " + puntaje);
     let div5 = document.getElementById("pregunta5");
     let p5 = document.createElement("p");
+    p5.setAttribute("class", "resultado");
     div5.appendChild(p5);
     p5.textContent = "Tu respuesta fue incorrecta";
   }
@@ -233,6 +242,7 @@ function respuestaClick5() {
   console.log("Tu Puntaje es " + puntaje);
   let div5 = document.getElementById("pregunta5");
   let p5 = document.createElement("p");
+  p5.setAttribute("class", "resultado");
   div5.appendChild(p5);
   p5.textContent =
     "Tu respuesta fue " +
@@ -258,6 +268,7 @@ function respuestaClick6() {
     console.log("Tu Puntaje es " + puntaje);
     let div6 = document.getElementById("pregunta6");
     let p6 = document.createElement("p");
+    p6.setAttribute("class", "resultado");
     div6.appendChild(p6);
     p6.textContent = "Tu respuesta fue incorrecta";
   }
@@ -265,6 +276,7 @@ function respuestaClick6() {
   console.log("Tu Puntaje es " + puntaje);
   let div6 = document.getElementById("pregunta6");
   let p6 = document.createElement("p");
+  p6.setAttribute("class", "resultado");
   div6.appendChild(p6);
   p6.textContent =
     "Tu respuesta fue " +
@@ -274,9 +286,9 @@ function respuestaClick6() {
 
   if (sessionStorage.getItem("puntaje", puntaje) >= 41) {
     console.log(`Tu personalidad es ${respuesta1.tipo}, son personas con ${respuesta1.dif}, y se diferencia de los demas por ser ${respuesta1.vent}`);
-    let h1 = document.createElement("h1");
-    selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta1.tipo}, son personas con ${respuesta1.dif}, y se diferencia de los demas por ser ${respuesta1.vent}`;
+    let h2 = document.createElement("h2");
+    selectorRespuesta.appendChild(h2);
+    h2.textContent = `Tu personalidad es ${respuesta1.tipo}, son personas con ${respuesta1.dif}, y se diferencia de los demas por ser ${respuesta1.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
@@ -284,9 +296,9 @@ function respuestaClick6() {
             }})
   } else if (sessionStorage.getItem("puntaje", puntaje) >= 30 && puntaje <= 40) {
     console.log(`Tu personalidad es ${respuesta2.tipo}, son personas con ${respuesta2.dif}, y se diferencia de los demas por ser ${respuesta2.vent}`);
-    let h1 = document.createElement("h1");
-    selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta2.tipo}, son personas con ${respuesta2.dif}, y se diferencia de los demas por ser ${respuesta2.vent}`;
+    let h2 = document.createElement("h2");
+    selectorRespuesta.appendChild(h2);
+    h2.textContent = `Tu personalidad es ${respuesta2.tipo}, son personas con ${respuesta2.dif}, y se diferencia de los demas por ser ${respuesta2.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
@@ -294,9 +306,9 @@ function respuestaClick6() {
             }})
   } else if (sessionStorage.getItem("puntaje", puntaje) >= 13 && puntaje <= 29) {
     console.log(`Tu personalidad es ${respuesta3.tipo}, son personas con ${respuesta3.dif}, y se diferencia de los demas por ser ${respuesta3.vent}`);
-    let h1 = document.createElement("h1");
-    selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta3.tipo}, son personas con ${respuesta3.dif}, y se diferencia de los demas por ser ${respuesta3.vent}`;
+    let h2 = document.createElement("h2");
+    selectorRespuesta.appendChild(h2);
+    h2.textContent = `Tu personalidad es ${respuesta3.tipo}, son personas con ${respuesta3.dif}, y se diferencia de los demas por ser ${respuesta3.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
@@ -304,9 +316,9 @@ function respuestaClick6() {
             }})
   } else if (sessionStorage.getItem("puntaje", puntaje) == 5 && puntaje <= 12) {
     console.log(`Tu personalidad es ${respuesta4.tipo}, son personas con ${respuesta4.dif}, y se diferencia de los demas por ser ${respuesta4.vent}`);
-    let h1 = document.createElement("h1");
-    selectorRespuesta.appendChild(h1);
-    h1.textContent = `Tu personalidad es ${respuesta4.tipo}, son personas con ${respuesta4.dif}, y se diferencia de los demas por ser ${respuesta4.vent}`;
+    let h2 = document.createElement("h2");
+    selectorRespuesta.appendChild(h2);
+    h2.textContent = `Tu personalidad es ${respuesta4.tipo}, son personas con ${respuesta4.dif}, y se diferencia de los demas por ser ${respuesta4.vent}`;
     $.get(URLHP, function (respuesta, estado){
         if(estado === "success"){
             let datosPersonajes = respuesta;
@@ -314,8 +326,8 @@ function respuestaClick6() {
             }})
   } else {
     console.log("HAS FALLADO EL TEST");
-    let h1 = document.createElement("h1");
-    selectorRespuesta.appendChild(h1);
-    h1.textContent = "HAS FALLADO EL TEST";
+    let h2 = document.createElement("h2");
+    selectorRespuesta.appendChild(h2);
+    h2.textContent = "HAS FALLADO EL TEST";
   }
 }
